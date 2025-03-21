@@ -1,5 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
+import { Home, Github, Linkedin } from 'lucide-react';
 import './App.css'
 
 function App() {
@@ -61,6 +62,17 @@ function App() {
             .
           </p>
         </motion.div>
+        <div className="floating-action-bar">
+          <a href="#home" className="fab-icon">
+            <Home />
+          </a>
+          <a href="https://github.com/LeoDiD" target="_blank" rel="noopener noreferrer" className="fab-icon">
+            <Github />
+          </a>
+          <a href="https://linkedin.com/in/yourusername" target="_blank" rel="noopener noreferrer" className="fab-icon">
+            <Linkedin />
+          </a>
+        </div>
       </motion.div>
     </div>
   )
