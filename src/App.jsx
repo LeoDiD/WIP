@@ -1,13 +1,28 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { Home, Github, Linkedin } from 'lucide-react';
+import { FaMoon, FaSun } from 'react-icons/fa';
 import './App.css'
 
 function App() {
+  const [darkMode, setDarkMode] = useState(false);
+
+  useEffect(() => {
+    if (darkMode) {
+      document.body.classList.add('dark-mode');
+    } else {
+      document.body.classList.remove('dark-mode');
+    }
+  }, [darkMode]);
+
+  const toggleDarkMode = () => {
+    setDarkMode(!darkMode);
+  };
+
   return (
-    <div className="bg-white min-h-screen flex items-center justify-center">
+    <div className={`min-h-screen flex items-center justify-center transition-colors duration-500 ${darkMode ? 'bg-black text-white' : 'bg-white text-black'}`}>
       <motion.div
-        className="bg-white text-black p-6 max-w-4xl mx-auto flex flex-col items-center"
+        className="p-6 max-w-4xl mx-auto flex flex-col items-center"
         initial={{ opacity: 0, y: 50 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 1 }}
@@ -72,6 +87,9 @@ function App() {
           <a href="https://linkedin.com/in/yourusername" target="_blank" rel="noopener noreferrer" className="fab-icon">
             <Linkedin />
           </a>
+          <button onClick={toggleDarkMode} className="fab-icon">
+            {darkMode ? <FaSun /> : <FaMoon />}
+          </button>
         </div>
       </motion.div>
     </div>
