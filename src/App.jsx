@@ -78,16 +78,16 @@ function App() {
           </p>
         </motion.div>
         <div className="floating-action-bar">
-          <a href="#home" className="fab-icon">
+          <a href="#home" className="fab-icon" data-label="Home">
             <Home />
           </a>
-          <a href="https://github.com/LeoDiD" target="_blank" rel="noopener noreferrer" className="fab-icon">
+          <a href="https://github.com/LeoDiD" target="_blank" rel="noopener noreferrer" className="fab-icon" data-label="GitHub">
             <Github />
           </a>
-          <a href="https://linkedin.com/in/yourusername" target="_blank" rel="noopener noreferrer" className="fab-icon">
+          <a href="https://linkedin.com/in/yourusername" target="_blank" rel="noopener noreferrer" className="fab-icon" data-label="LinkedIn">
             <Linkedin />
           </a>
-          <button onClick={toggleDarkMode} className="fab-icon">
+          <button onClick={toggleDarkMode} className="fab-icon" data-label="Toggle Dark Mode">
             {darkMode ? <FaSun /> : <FaMoon />}
           </button>
         </div>
