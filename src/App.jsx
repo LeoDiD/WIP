@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { Home, Github, Linkedin } from 'lucide-react';
 import { FaMoon, FaSun } from 'react-icons/fa';
-import './App.css'
+import './App.css';
 
 function App() {
   const [darkMode, setDarkMode] = useState(false);
@@ -20,14 +20,14 @@ function App() {
   };
 
   return (
-    <div className={`min-h-screen flex items-center justify-center transition-colors duration-500 ${darkMode ? 'bg-black text-white' : 'bg-white text-black'}`}>
+    <main className={`min-h-screen flex items-center justify-center transition-colors duration-500 ${darkMode ? 'bg-black text-white' : 'bg-white text-black'}`}>
       <motion.div
         className="p-6 max-w-4xl mx-auto flex flex-col items-center"
         initial={{ opacity: 0, y: 50 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 1 }}
       >
-        <div className="flex flex-col items-center">
+        <section id="home" className="flex flex-col items-center w-full px-6">
           <motion.div
             className="flex-1 text-center"
             initial={{ opacity: 0 }}
@@ -41,42 +41,32 @@ function App() {
               </span>
             </h1>
             <p className="text-2xl mb-6">
-              Frontend Developer. I love designing websites <br />
-              and turning them into code. Slightly addicted <br />
-              to coffee, and not a fan of CSS.
+              Aspiring Web Full Stack. I enjoy coming up with website ideas <br />
+              and turning them into code.<br />
             </p>
           </motion.div>
-        </div>
-        <motion.div
-          className="mt-8 text-center"
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ delay: 1.5, duration: 1 }}
-        >
-          <h2 className="text-3xl font-bold mb-4">
-            About
-          </h2>
-          <p className="text-xl mb-4">
-            By the middle of 2024, I graduated with a Bachelor of Science in Information Technology,
-            <span className="font-bold">
-              majoring in Web Development
-            </span>
-            , interned at one of the first IT companies in Bataan and landed my
-            first job as an Assistant Junior Programmer. In the past, I had the opportunity to join
-            <a className="underline" href="#">
-              IRCITE 2024
-            </a>
-            for a paper presentation and also won the
-            <span className="font-bold">
-              Best Paper in the IT Category
-            </span>
-            at
-            <a className="underline" href="#">
-              Bataan Peninsula State University
-            </a>
-            .
-          </p>
-        </motion.div>
+        </section>
+
+        <section id="about" className="mt-8 text-center w-full px-6">
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ delay: 1.5, duration: 1 }}
+          >
+            <h2 className="text-3xl font-bold mb-4 text-left">
+              About
+            </h2>
+            <p className="text-xl mb-4">
+              I'm a 2nd-year BSIT student with a focus on  <br />
+              <span className="font-bold">
+                Web Full Stack Development
+              </span>
+              I’m continuously improving my expertise in frontend development. <br />
+              I'm also interested in learning more about backend development.  <br />
+            </p>
+          </motion.div>
+        </section>
+
         <div className="floating-action-bar">
           <a href="#home" className="fab-icon" data-label="Home">
             <Home />
@@ -92,8 +82,8 @@ function App() {
           </button>
         </div>
       </motion.div>
-    </div>
-  )
+    </main>
+  );
 }
 
-export default App
+export default App;
