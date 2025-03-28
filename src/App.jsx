@@ -64,7 +64,14 @@ function App() {
 
         <section id="skills" className="mt-8 w-full px-6">
           <h2 className="text-3xl font-bold mb-4 text-left">Skills</h2>
-          <div></div>
+          <div className="flex flex-wrap gap-4">
+            <div className="skill-button">HTML</div>
+            <div className="skill-button">CSS</div>
+            <div className="skill-button">JavaScript</div>
+            <div className="skill-button">React</div>
+            <div className="skill-button">Node.js</div>
+            <div className="skill-button">Git</div>
+          </div>
         </section>
 
         <div className="floating-action-bar flex items-center justify-center bg-gray-100 dark:bg-gray-800">
