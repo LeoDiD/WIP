@@ -177,3 +177,26 @@ body.dark-mode {
   background-color: rgba(255, 255, 255, 0.9);
   color: black;
 }
+
+.skill-button {
+  display: inline-block;
+  padding: 5px 15px; /* Reduced padding for smaller buttons */
+  background-color: black; /* Black background */
+  color: white; /* White text */
+  border-radius: 8px; /* Slightly rounded corners */
+  font-size: 12px; /* Smaller font size */
+  font-weight: bold; /* Bold text */
+  text-align: center; /* Center text */
+  cursor: default; /* Non-clickable cursor */
+  user-select: none; /* Prevent text selection */
+  transition: transform 0.2s ease, background-color 0.3s ease;
+}
+
+.skill-button:hover {
+  transform: translateY(-2px); /* Subtle hover effect */
+  background-color: #333; /* Slightly lighter black on hover */
+}
+
+.flex.flex-wrap.gap-4 {
+  gap: 12px; /* Reduced gap between buttons for a tighter layout */
+}
