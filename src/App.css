@@ -124,39 +124,39 @@ body.dark-mode {
   transform: translateX(-50%);
   display: flex;
   flex-direction: row;
-  gap: 12px;
-  padding: 8px 12px;
-  border-radius: 50px;
-  background-color: rgba(255, 255, 255, 0.9);
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-  transition: background-color 0.3s;
+  gap: 8px; /* Reduced gap for a minimalist look */
+  padding: 6px 10px; /* Smaller padding */
+  border-radius: 30px; /* Slightly rounded corners */
+  background-color: rgba(255, 255, 255, 0.8); /* Subtle background */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Minimal shadow */
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
 }
 
 .fab-icon {
-  width: 50px;
-  height: 50px;
+  width: 40px;
+  height: 40px;
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: white;
+  background-color: transparent;
   border-radius: 50%;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
-  transition: transform 0.3s ease, background-color 0.3s ease;
-  color: black;
-  position: relative;
+  color: black; /* Default color */
+  transition: transform 0.2s ease, background-color 0.3s ease;
 }
 
 .fab-icon:hover {
-  transform: translateY(-5px); /* Move up a little bit */
+  transform: translateY(-3px);
+  background-color: rgba(0, 0, 0, 0.1);
 }
 
 .fab-icon:hover::after {
   content: attr(data-label); /* Display label */
   position: absolute;
-  bottom: 60px; /* Position above the icon */
+  bottom: 50px; /* Position above the icon */
   left: 50%;
   transform: translateX(-50%);
   background-color: rgba(0, 0, 0, 0.7);
+  
   color: white;
   padding: 5px 10px;
   border-radius: 5px;
@@ -165,12 +165,16 @@ body.dark-mode {
 }
 
 .dark-mode .floating-action-bar {
-  background-color: rgba(40, 40, 40, 0.9);
+  background-color: rgba(40, 40, 40, 0.8); /* Subtle dark mode background */
 }
 
 .dark-mode .fab-icon {
-  background-color: #333;
-  color: white;
+  color: white; /* Ensure visibility in dark mode */
+}
+
+.dark-mode .fab-icon:hover {
+  background-color: rgba(255, 255, 255, 0.1); /* Light background on hover in dark mode */
+  box-shadow: 0 2px 5px rgba(255, 255, 255, 0.2); /* Add shadow on hover in dark mode */
 }
 
 .dark-mode .fab-icon:hover::after {
